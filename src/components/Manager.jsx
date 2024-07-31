@@ -54,10 +54,10 @@ const Manager = () => {
         if (form.site.length > 3 && form.username.length > 3 && form.password.length > 3) {
 
             // If any such id exists in the db, delete it 
-            await fetch("https://password-manager-with-mongo-db.vercel.app/", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: form.id }) })
+            await fetch("mongodb+srv://DiptangshuRoy:tor12onion@mycluster.mibe56m.mongodb.net/?retryWrites=true&w=majority&appName=MyCluster", { method: "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: form.id }) })
 
             setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
-            await fetch("https://password-manager-with-mongo-db.vercel.app/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, id: uuidv4() }) })
+            await fetch("mongodb+srv://DiptangshuRoy:tor12onion@mycluster.mibe56m.mongodb.net/?retryWrites=true&w=majority&appName=MyCluster", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, id: uuidv4() }) })
 
             // Otherwise clear the form and show toast
             setform({ site: "", username: "", password: "" })
