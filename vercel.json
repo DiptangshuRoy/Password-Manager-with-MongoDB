@@ -11,11 +11,5 @@
       "src": "/(.*)",
       "dest": "index.js"
     }
-  ],
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "command": "npm run dev"
-  }
+  ]
 }
