@@ -140,7 +140,7 @@ const Manager = () => {
                             src="https://cdn.lordicon.com/jgnvfzqg.json"
                             trigger="hover" >
                         </lord-icon>
-                        Save</button>
+                        Saves</button>
                 </div>
 
                 <div className="passwords">
