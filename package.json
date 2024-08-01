@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "cd backend && nodemon server.js",
-    "dev": "vite",
-    "build": "cd backend && node server.js && cd.. && vite build",
+    "dev": "vite && cd backend && node server.js && cd..",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
